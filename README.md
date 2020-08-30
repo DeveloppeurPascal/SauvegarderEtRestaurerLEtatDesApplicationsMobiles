@@ -1,4 +1,4 @@
-# SauvegarderEtRestaurerLEtatDesApplicationsMobiles
+# Sauvegarder et restaurer l'état des applications mobiles - webinaire du 31 août 2020
 Sources des exemples et démonstrations liées au webinaire "Sauvegarder et restaurer l'état des applications mobiles" du 31 août 2020.
 
 Les exemples de ce projet démontrent les cycles de vies d'applications pour iOS et Android développées avec Delphi en utilisant son framework de composants visuels multiplateformes FireMonkey.

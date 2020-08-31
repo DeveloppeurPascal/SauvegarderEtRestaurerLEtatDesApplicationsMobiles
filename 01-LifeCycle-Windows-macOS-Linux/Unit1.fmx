@@ -1,0 +1,62 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnDeactivate = FormDeactivate
+  OnDestroy = FormDestroy
+  OnResize = FormResize
+  OnShow = FormShow
+  OnHide = FormHide
+  DesignerMasterStyle = 0
+  object btnShowLog: TButton
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Affiche historique'
+    OnClick = btnShowLogClick
+  end
+  object Layout1: TLayout
+    Align = Center
+    Size.Width = 201.000000000000000000
+    Size.Height = 117.000000000000000000
+    Size.PlatformDefault = False
+    object btnShowForm2Modal: TButton
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 191.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'btnShowForm2Modal'
+      OnClick = btnShowForm2ModalClick
+    end
+    object btnShowForm2: TButton
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 59.000000000000000000
+      Size.Width = 191.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'btnShowForm2'
+      OnClick = btnShowForm2Click
+    end
+  end
+end

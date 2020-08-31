@@ -1,0 +1,112 @@
+unit Unit1;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts;
+
+type
+  TForm1 = class(TForm)
+    btnShowForm2Modal: TButton;
+    btnShowLog: TButton;
+    btnShowForm2: TButton;
+    Layout1: TLayout;
+    procedure btnShowForm2ModalClick(Sender: TObject);
+    procedure btnShowLogClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDeactivate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure FormHide(Sender: TObject);
+    procedure FormResize(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure btnShowForm2Click(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.fmx}
+
+uses Unit2, fLog;
+
+procedure TForm1.btnShowLogClick(Sender: TObject);
+begin
+  frmLog.Show;
+end;
+
+procedure TForm1.btnShowForm2Click(Sender: TObject);
+begin
+  form2.Show;
+end;
+
+procedure TForm1.btnShowForm2ModalClick(Sender: TObject);
+begin
+  form2.ShowModal;
+end;
+
+procedure TForm1.FormActivate(Sender: TObject);
+begin
+  LogAdd('unit1 - FormActivate');
+end;
+
+procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  LogAdd('unit1 - FormClose');
+end;
+
+procedure TForm1.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+begin
+  LogAdd('unit1 - FormCloseQuery');
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  LogAdd('unit1 - FormCreate');
+end;
+
+procedure TForm1.FormDeactivate(Sender: TObject);
+begin
+  LogAdd('unit1 - FormDeactivate');
+end;
+
+procedure TForm1.FormDestroy(Sender: TObject);
+begin
+  LogAdd('unit1 - FormDestroy');
+end;
+
+procedure TForm1.FormHide(Sender: TObject);
+begin
+  LogAdd('unit1 - FormHide');
+end;
+
+procedure TForm1.FormResize(Sender: TObject);
+begin
+  LogAdd('unit1 - FormResize');
+end;
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+  LogAdd('unit1 - FormShow');
+end;
+
+initialization
+
+LogAdd('unit1 - initialization');
+
+finalization
+
+LogAdd('unit1 - finalization');
+
+end.
